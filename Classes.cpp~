@@ -1,9 +1,4 @@
 #include <iostream>
-#include <cstring>
-#include "Media.h"
-#include "Movie.h"
-#include "Music.h"
-#include "VideoGame.h"
 
 using namespace std;
 
