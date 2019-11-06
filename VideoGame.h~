@@ -1,4 +1,4 @@
-#ifndefine VIDEOGAME_H
+#ifndef VIDEOGAME_H
 #define VIDEOGAME_H
 
 #include <iostream>

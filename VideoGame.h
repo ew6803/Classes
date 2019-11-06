@@ -1,3 +1,5 @@
+//Header file for Video Games
+
 #ifndef VIDEOGAME_H
 #define VIDEOGAME_H
 

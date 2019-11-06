@@ -1,4 +1,24 @@
 #include <iostream>
 #include <cstring>
-#incldue <media.h>
+#include "Media.h"
+
+using namespace std;
+
+Media::Media() {
+
+}
+
+int Media::getType() {
+  return 0;
+}
+
+
+char* Media::getTitle() {
+  return Title;
+  
+}
+
+int* Media::getYear() {
+  return &Year;
+}
 

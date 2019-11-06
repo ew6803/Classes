@@ -19,5 +19,5 @@ class Movie:public Media {
  char Director[50];
  int Duration;
  float Rating;
- ;}
+};
 #endif

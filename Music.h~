@@ -15,7 +15,7 @@ public:
   int* getDuration();
   char* getPublisher();
 
-  private;
+ private:
   char Artist[50];
   int Duration;
   char Publisher[50];
