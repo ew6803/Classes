@@ -1,3 +1,5 @@
+//Header file for parent class, media
+
 #ifndef MEDIA_H
 #define MEDIA_H
 
@@ -9,6 +11,7 @@ using namespace std;
 class Media {
  public:
   Media();
+  ~Media();
   char* getTitle();
   int* getYear();
   virtual int getType();

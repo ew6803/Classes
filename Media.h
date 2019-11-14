@@ -11,11 +11,10 @@ using namespace std;
 class Media {
  public:
   Media();
+  ~Media();
   char* getTitle();
   int* getYear();
   virtual int getType();
-
- private:
   char Title[100];
   int Year;
 

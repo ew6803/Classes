@@ -11,6 +11,7 @@ class Movie:public Media {
 
  public: 
   Movie();
+  ~Movie();
   virtual int getType();
  char* getDirector();
  int* getDuration();

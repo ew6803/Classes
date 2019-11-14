@@ -9,6 +9,11 @@ using namespace std;
 
 Music::Music() {}
 
+Music::~Music() {
+  delete []Artist;
+  delete []Title;
+  delete []Publisher;
+}
 int Music::getType() {
 return 1;
 }

@@ -48,7 +48,7 @@ void ADD(vector<Media*>* allMedia) {
     cin.get(Song -> getTitle(), 50);
     cin.clear();
     cin.ignore(9999, '\n');
-    cout << "Enter Movie Year; \n";
+    cout << "Enter Music Year; \n";
     cin >> *Song -> getYear(); 
     cin.clear();
     cin.ignore(9999, '\n');
@@ -277,7 +277,7 @@ void DELETE(vector<Media*>* allMedia) {
         return; 
       }
       else {
-        cout << "Ok, is Fine, back to home you go";
+        cout << "Ok, is Fine";
       }
 
     }

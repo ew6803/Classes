@@ -11,6 +11,7 @@ class Music:public Media {
 
 public:
   Music();
+  ~Music();
   virtual int getType();
   char* getArtist();
   int* getDuration();

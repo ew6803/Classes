@@ -10,6 +10,11 @@ Media::Media() {
 
 }
 
+Media::~Media() {
+  delete []Title;
+}
+
+
 int Media::getType() {
   return 0;
 }

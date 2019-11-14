@@ -10,7 +10,10 @@ using namespace std;
 VideoGame::VideoGame()
 
 {}
-
+VideoGame::~VideoGame() {
+  delete []Publisher;
+  delete []Title;
+}
 int VideoGame::getType() {
   return 0;
 }

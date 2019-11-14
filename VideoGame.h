@@ -12,6 +12,7 @@ using namespace std;
 class VideoGame:public Media {
  public:
   VideoGame();
+  ~VideoGame();
   virtual int getType();
   char* getPublisher();
   float* getRating();

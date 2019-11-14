@@ -9,7 +9,10 @@ using namespace std;
 
 Movie::Movie()
 {}
-
+Movie::~Movie() {
+  delete []Director;
+  delete []Title;
+}
 int Movie::getType() {
   return 2;
 }
