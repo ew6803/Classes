@@ -205,14 +205,39 @@ void DELETE(vector<Media*>* allMedia) {
 	  cout << "Year: " << *(*cycle) -> getYear() << endl;
 	  cout << "Publisher: " << dynamic_cast<VideoGame*>(*cycle) -> getPublisher() << endl;
 	  cout << "Rating: " << *dynamic_cast<VideoGame*>(*cycle) -> getRating() << endl << endl;
+	   cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
+      cin.get(deletE, 50);
+      cin.clear();
+      cin.ignore(9999, '\n');
+      if (strcmp(deletE, "yes") == 0) {
+	delete *cycle;
+	cycle = allMedia -> erase(cycle);
+	break;
+
       }
-    
+      else {
+	cout << "Ok, is fine";
+      }
+      }
       else if ((strcmp(input3, (*cycle) -> getTitle()) == 0) && ((*cycle) -> getType() == 1)) {
 	  cout << endl << "Title: " << (*cycle) -> getTitle() << endl;
 	  cout << "Year: " << *(*cycle) -> getYear() << endl;
 	  cout << "Artist: " << dynamic_cast<Music*>(*cycle) -> getArtist() << endl;
 	  cout << "Duration: " << *dynamic_cast<Music*>(*cycle) -> getDuration() << endl;
 	  cout << "Publisher: " << dynamic_cast<Music*>(*cycle) -> getPublisher() << endl << endl;
+	   cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
+      cin.get(deletE, 50);
+      cin.clear();
+      cin.ignore(9999, '\n');
+      if (strcmp(deletE, "yes") == 0) {
+	delete *cycle;
+	cycle = allMedia -> erase(cycle);
+	break;
+
+      }
+      else {
+	cout << "Ok, is fine";
+      }
       }
       else if ((strcmp(input3, (*cycle) -> getTitle()) == 0) && ((*cycle) -> getType() == 2)) {
 	  cout << endl << "Title: " << (*cycle) -> getTitle() << endl;
@@ -220,36 +245,49 @@ void DELETE(vector<Media*>* allMedia) {
 	  cout << "Director: " << dynamic_cast<Movie*>(*cycle) -> getDirector() << endl;
 	  cout << "Duration: " << *dynamic_cast<Movie*>(*cycle) -> getDuration() << endl;
 	  cout << "Rating: " << *dynamic_cast<Movie*>(*cycle) -> getRating() << endl << endl;
-      }
-      //Asks user if they wish to delete, then deletes it if they wish for it to be deleted, Exits after one deletes, or there are no more search results to be deleted
-      cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
+	   cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
       cin.get(deletE, 50);
       cin.clear();
       cin.ignore(9999, '\n');
       if (strcmp(deletE, "yes") == 0) {
 	delete *cycle;
 	cycle = allMedia -> erase(cycle);
-	return;
+	break;
 
       }
       else {
 	cout << "Ok, is fine";
       }
+      }
     }
+    return; 
   }
-
        
   else if (strcmp(input2, "YEAR") == 0) {
     cout << "What Year would you like to search by? \n";
     cin >> input;
     cin.clear();
     cin.ignore(9999, '\n');
+    cout << "test";
     for (cycle = allMedia -> begin(); cycle != allMedia -> end(); ++cycle) {
       if ((input == *(*cycle) -> getYear()) && ((*cycle) -> getType() == 0)) {
 	  cout << endl << "Title: " << (*cycle) -> getTitle() << endl;
 	  cout << "Year: " << *(*cycle) -> getYear() << endl;
 	  cout << "Publisher: " << dynamic_cast<VideoGame*>(*cycle) -> getPublisher() << endl;
 	  cout << "Rating: " << *dynamic_cast<VideoGame*>(*cycle) -> getRating() << endl << endl;
+	  cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
+      cin.get(deletE, 50);
+      cin.clear();
+      cin.ignore(9999, '\n');
+      if (strcmp(deletE, "yes") == 0) {
+	delete *cycle;
+	cycle = allMedia -> erase(cycle);
+	break;
+
+      }
+      else {
+	cout << "Ok, is fine";
+      }
       }
     
       else if ((input == *(*cycle) -> getYear()) && ((*cycle) -> getType() == 1)) {
@@ -258,6 +296,19 @@ void DELETE(vector<Media*>* allMedia) {
 	  cout << "Artist: " << dynamic_cast<Music*>(*cycle) -> getArtist() << endl;
 	  cout << "Duration: " << *dynamic_cast<Music*>(*cycle) -> getDuration() << endl;
 	  cout << "Publisher: " << dynamic_cast<Music*>(*cycle) -> getPublisher() << endl << endl;
+	   cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
+      cin.get(deletE, 50);
+      cin.clear();
+      cin.ignore(9999, '\n');
+      if (strcmp(deletE, "yes") == 0) {
+	delete *cycle;
+	cycle = allMedia -> erase(cycle);
+	break;
+
+      }
+      else {
+	cout << "Ok, is fine";
+      }
       }
       else if ((input == *(*cycle) -> getYear()) && ((*cycle) -> getType() == 2)) {
 	  cout << endl << "Title: " << (*cycle) -> getTitle() << endl;
@@ -265,29 +316,27 @@ void DELETE(vector<Media*>* allMedia) {
 	  cout << "Director: " << dynamic_cast<Movie*>(*cycle) -> getDirector() << endl;
 	  cout << "Duration: " << *dynamic_cast<Movie*>(*cycle) -> getDuration() << endl;
 	  cout << "Rating: " << *dynamic_cast<Movie*>(*cycle) -> getRating() << endl << endl;
-      }
-      //Asks user if they want to delete, then deletes it if they want it to be deleted. Exited after one deletes, of there are no more search results to be deleted
-      cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
+	   cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
       cin.get(deletE, 50);
       cin.clear();
       cin.ignore(9999, '\n');
       if (strcmp(deletE, "yes") == 0) {
 	delete *cycle;
 	cycle = allMedia -> erase(cycle);
-        return; 
+	break;
+
       }
       else {
-        cout << "Ok, is Fine, back to home you go";
+	cout << "Ok, is fine";
       }
-
-    }
-  }
+      }
 	
   else {
-    "You did not enter a valid input. \n";
+    cout << "You did not enter a valid input. \n";
   }
-
-}
+    }
+  }
+}    
 //Main Line, asks user which of the 4 options they want and runs the function
 int main() {
   char function[50]; 
