@@ -199,6 +199,7 @@ void DELETE(vector<Media*>* allMedia) {
     cin.get(input3, 50);
     cin.clear();
     cin.ignore(9999, '\n');
+    //Prints class in the array only if it meets certain requirements, needs to match the title or year and varies depending on the 3 types of media
     for (cycle = allMedia -> begin(); cycle != allMedia -> end(); ++cycle) {
       if ((strcmp(input3, (*cycle) -> getTitle()) == 0) && ((*cycle) -> getType() == 0)) {
 	  cout << endl << "Title: " << (*cycle) -> getTitle() << endl;
@@ -206,6 +207,8 @@ void DELETE(vector<Media*>* allMedia) {
 	  cout << "Publisher: " << dynamic_cast<VideoGame*>(*cycle) -> getPublisher() << endl;
 	  cout << "Rating: " << *dynamic_cast<VideoGame*>(*cycle) -> getRating() << endl << endl;
 	   cout << "Do you wish to delete this Media? Only yes will delete, everything else is taken as no \n";
+      //Deletes that specific media, the rest of the code on this function is just a duplicate of the same logic two more times
+      //The second part is the same thing repeated but for a year search instead of a title one. 
       cin.get(deletE, 50);
       cin.clear();
       cin.ignore(9999, '\n');
